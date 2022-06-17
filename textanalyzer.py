@@ -21,6 +21,8 @@ def count_char(text, char):
             count += 1
     return count
 
-#Call count_char function in the file
+#Find the percentage of the tex each character of the alphabet occupies
 
-print(count_char(text, "r"))
+for char in "abcdefghijklmnopqrstuvwxyz":
+    perc = 100* count_char(text, char) / len(text)
+    print("{0} - {1}%".format(char, round(perc, 2)))
